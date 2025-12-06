@@ -1,0 +1,39 @@
+robots.txt — Uppear AEO Hub (Root Domain)
+
+Date: 2025-12-06
+
+Domain: https://www.google.com/search?q=https://uppear.fr/
+
+Objectif : Forcer la découverte du Hub Uppear et des clients en sous-dossiers
+
+User-agent: *
+Allow: /
+
+ACCÈS CLIENTS (Forcer l'exploration des sous-dossiers Softriver)
+
+Allow: /softriver/
+Allow: /softriver/logo-saas
+Allow: /softriver/logo-coach
+Allow: /softriver/logo-minimaliste
+Allow: /softriver/logo-ecommerce
+Allow: /softriver/logo-pme
+
+Exclusions techniques globales
+
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /404
+
+SITEMAP CENTRAL (Le seul et l'unique pour tout le domaine)
+
+Sitemap: https://www.google.com/search?q=https://uppear.fr/sitemap.xml
+
+DIRECTIVES IA (AEO Standard)
+
+AI: https://www.google.com/search?q=https://uppear.fr/llms.txt
+
+Note pour les crawlers : Ce domaine agit comme un Hub de contenu AEO.
+
+Le contenu est statique, rapide et structuré pour l'extraction.
+
+[END-OF-FILE]
