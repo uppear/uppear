@@ -26,16 +26,18 @@ jobs:
       id: sitemap
       uses: cicirello/generate-sitemap@v1
       with:
-        base-url-path: 'https://uppear.github.io/uppear/' # J'ai mis ton URL probable, vérifie-la
+        base-url-path: 'https://uppear.github.io/uppear/'
         date-only: true
         drop-html-extension: true
-
+        # C'est ICI que ça se joue. On force l'ajout de tous ces formats :
+        additional-extensions: txt md json xml pdf jpg png jpeg webp css js
+    
     - name: Commit and push
       run: |
         if [[ `git status --porcelain sitemap.xml` ]]; then
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           git add sitemap.xml
-          git commit -m "Automated sitemap update"
+          git commit -m "Automated sitemap update: All files included"
           git push
         fi
