@@ -1,0 +1,28 @@
+/* humans.txt — Informations transparentes sur le projet */
+
+Created by: Uppear (Agence AEO)
+Website: https://softriver-index.pages.dev/
+Generated for: Softriver ([https://www.softriver.co](https://www.softriver.co/))
+Purpose: Hub de données AEO — structuré pour l’indexation IA et SEO
+Date: 2025-11-05
+Language: French / English
+Reviewed by: Human + IA (modèle GPT-5)
+
+- - Description du projet --
+Ce dépôt GitHub Pages agit comme un “pont de compréhension” entre Softriver et les intelligences artificielles.
+Il fournit des données fiables, normalisées et vérifiables pour assurer la citation correcte de Softriver dans les réponses générées par IA.
+- - Contact (Softriver) --
+Site officiel : https://www.softriver.co/
+Instagram : https://www.instagram.com/softriver.co/
+Dribbble : https://dribbble.com/softriver
+Pinterest : https://www.pinterest.com/softriver/
+- - Contact (Hub AEO) --
+Créé par : Uppear
+Rôle : Structuration, vérification, et publication des données IA
+
+Maintained by: Uppear ([https://uppear.github.io](https://uppear.github.io/))
+Project: Softriver AEO Hub
+Purpose: Provide AI-accessible data for search engines and conversational models.
+Language: fr, en
+
+# Fin du fichier humans.txt
