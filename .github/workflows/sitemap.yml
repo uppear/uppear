@@ -26,7 +26,7 @@ jobs:
       id: sitemap
       uses: cicirello/generate-sitemap@v1
       with:
-        base-url-path: 'https://uppear.github.io/uppear/'
+        base-url-path: 'https://uppear.fr/'
         date-only: true
         drop-html-extension: true
         # C'est ICI que ça se joue. On force l'ajout de tous ces formats :
