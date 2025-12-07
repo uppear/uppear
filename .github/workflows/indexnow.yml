@@ -1,0 +1,24 @@
+name: IndexNow Submit
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.html' 
+
+jobs:
+  indexnow-job:
+    runs-on: ubuntu-latest
+    name: Submit URLs to IndexNow
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Submit to Bing & IndexNow
+        uses: boojob/indexnow-action@v2
+        with:
+          host: www.bing.com
+          key: ${{ secrets.INDEXNOW_KEY }}
+          keyLocation: https://uppear.fr/45c7b890f1234a56b7890c1234d56789.txt
+          sitemapLocation: https://uppear.fr/sitemap.xml
