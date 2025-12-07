@@ -4,7 +4,8 @@ on:
   push:
     branches: [ main ]
   schedule:
-    - cron: "0 0 * * 1" # Vérifie aussi tous les lundis matin
+    - cron: "0 0 * * 1" 
+    workflow_dispatch:
 
 permissions:
   contents: read
