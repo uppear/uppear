@@ -83,6 +83,7 @@
             border-radius: 8px;
             transition: transform 0.2s ease;
             box-sizing: border-box;
+            text-align: center; /* Assure le centrage du texte */
         }
 
         .btn:active { transform: scale(0.98); }
@@ -97,6 +98,10 @@
             background-color: transparent;
             color: #ffffff;
             border: 1px solid #ffffff;
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
         }
 
         /* Info Card */
@@ -147,7 +152,11 @@
         }
 
         @media (min-width: 480px) {
-            .actions { flex-direction: row; }
+            .actions { 
+                flex-direction: row; 
+                flex-wrap: wrap; /* Permet aux boutons de passer à la ligne si besoin */
+            }
+            .btn { flex: 1; } /* Les boutons prennent une largeur égale */
         }
     </style>
 
@@ -227,6 +236,7 @@
         <div class="actions">
             <a href="tel:+33230314100" class="btn btn-primary">📞 Appeler maintenant</a>
             <a href="https://www.google.com/maps/search/?api=1&query=Markus+Hotel+21+boulevard+du+Marechal+Foch+Angers" target="_blank" class="btn btn-outline">📍 Voir l'itinéraire</a>
+            <a href="https://www.markus.fr/hotel/" target="_blank" class="btn btn-outline">🌐 Visiter le site officiel</a>
         </div>
 
         <div class="info-card">
