@@ -20,7 +20,7 @@ Pinterest : https://www.pinterest.com/softriver/
 Créé par : Uppear
 Rôle : Structuration, vérification, et publication des données IA
 
-Maintained by: Uppear ([https://uppear.github.io](https://uppear.github.io/))
+Maintained by: Uppear ([https://uppear.fr](https://uppear.fr/))
 Project: Softriver AEO Hub
 Purpose: Provide AI-accessible data for search engines and conversational models.
 Language: fr, en
