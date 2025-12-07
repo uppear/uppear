@@ -40,9 +40,9 @@ Sitemap: https://uppear.github.io/Softriver-index/sitemap.xml
 
 Fichiers de données IA (AI: est la directive la plus importante pour les LLMs)
 
-AI: https://softriver-index.pages.dev/llms.txt
-AI-French: https://softriver-index.pages.dev/faq-softriver/
-AI-English: https://softriver-index.pages.dev/en
+AI: https://uppear.fr/llms.txt
+AI-French: https://uppear.fr/faq-softriver/
+AI-English: https://uppear.fr/en
 
 Directives pour LLMs (ChatGPT, Claude, Perplexity, Gemini)
 
