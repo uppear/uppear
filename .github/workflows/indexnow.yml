@@ -5,21 +5,61 @@ on:
     branches:
       - main
     paths:
-      - '**.html' 
-  workflow_dispatch:
+      - '**.html' # Se lance quand tu modifies du HTML
+  workflow_dispatch: # Le bouton manuel (bien aligné cette fois)
 
 jobs:
   indexnow-job:
     runs-on: ubuntu-latest
     name: Submit URLs to IndexNow
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Submit to Bing & IndexNow
-        uses: boojob/indexnow-action@v2
-        with:
-          host: www.bing.com
-          key: ${{ secrets.INDEXNOW_KEY }}
-          keyLocation: https://uppear.fr/45c7b890f1234a56b7890c1234d56789.txt
-          sitemapLocation: https://uppear.fr/sitemap.xml
+      - name: Install Python dependencies
+        run: pip install requests
+
+      - name: Submit to IndexNow (Python Script)
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        shell: python
+        run: |
+          import requests
+          import xml.etree.ElementTree as ET
+          import os
+
+          # 1. Lire le sitemap local (Directement sur le disque, pas d'erreur 404)
+          try:
+              tree = ET.parse('sitemap.xml')
+              root = tree.getroot()
+              # Gérer les namespaces XML qui embêtent souvent les scripts
+              namespace = {'ns': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+              urls = [elem.text for elem in root.findall('ns:url/ns:loc', namespace)]
+              print(f"✅ URLs trouvées dans le sitemap local : {len(urls)}")
+          except Exception as e:
+              print(f"⚠️ Erreur lecture sitemap : {e}")
+              # Si pas de sitemap, on envoie au moins l'accueil
+              urls = ["https://uppear.fr/", "https://uppear.fr/index.html"]
+
+          # 2. Préparer la requête JSON
+          payload = {
+              "host": "uppear.fr",
+              "key": os.environ["INDEXNOW_KEY"],
+              "keyLocation": "https://uppear.fr/45c7b890f1234a56b7890c1234d56789.txt",
+              "urlList": urls
+          }
+
+          # 3. Envoyer à Bing / IndexNow
+          print("🚀 Envoi à IndexNow...")
+          response = requests.post("https://api.indexnow.org/indexnow", json=payload)
+          
+          print(f"Statut Code : {response.status_code}")
+          print(f"Réponse : {response.text}")
+
+          if response.status_code == 200:
+              print("✅ Succès ! Bing a reçu les URLs.")
+          elif response.status_code == 202:
+               print("✅ Succès ! Reçu et en cours de traitement.")
+          else:
+              print("❌ Erreur lors de l'envoi.")
+              exit(1)
