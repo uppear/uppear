@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap Local
+Sitemap: https://uppear.fr/sitemap.xml
