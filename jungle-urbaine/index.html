@@ -69,7 +69,8 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
-            margin-bottom: 50px;
+            /* Réduction de la marge pour coller au bouton site */
+            margin-bottom: 15px; 
         }
 
         .btn {
@@ -81,7 +82,7 @@
             font-weight: 600;
             font-size: 1rem;
             border-radius: 8px;
-            transition: transform 0.2s ease;
+            transition: transform 0.2s ease, background-color 0.2s;
         }
 
         .btn:active {
@@ -98,6 +99,19 @@
             background-color: transparent;
             color: #ffffff;
             border: 1px solid #ffffff;
+        }
+
+        /* NOUVEAU STYLE POUR LE BOUTON SITE */
+        .btn-website {
+            border: 1px solid rgba(255, 255, 255, 0.4); /* Bordure plus subtile */
+            margin-bottom: 50px; /* L'espace est déplacé ici */
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .btn-website:hover {
+            border-color: #ffffff;
+            background-color: rgba(255,255,255,0.1);
         }
 
         /* LOCAL INFO BLOCK */
@@ -147,7 +161,8 @@
             .cta-container {
                 flex-direction: row;
             }
-            .btn {
+            /* Les boutons du haut se partagent l'espace */
+            .cta-container .btn {
                 flex: 1;
             }
         }
@@ -215,6 +230,10 @@
                 📍 Voir l'itinéraire
             </a>
         </div>
+
+        <a href="https://jungleurbainetours.com/" target="_blank" class="btn btn-secondary btn-website">
+            🌐 Visiter le site
+        </a>
 
         <div class="info-card">
             <div class="info-item">
