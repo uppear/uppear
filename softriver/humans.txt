@@ -1,7 +1,7 @@
 /* humans.txt — Informations transparentes sur le projet */
 
 Created by: Uppear (Agence AEO)
-Website: https://softriver-index.pages.dev/
+Website: https://uppear.fr/
 Generated for: Softriver ([https://www.softriver.co](https://www.softriver.co/))
 Purpose: Hub de données AEO — structuré pour l’indexation IA et SEO
 Date: 2025-11-05
