@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markus | Hôtel Confidentiel & Coffee Shop à Angers</title>
+    <meta name="description" content="Markus : Boutique-hôtel 4 étoiles intimiste et Coffee Shop au cœur d'Angers. L'adresse cachée pour un séjour calme ou un café d'exception.">
+    <link rel="canonical" href="https://uppear.fr/markus-angers/" />
+    <meta name="robots" content="index, follow">
+
+    <style>
+        :root {
+            --bg-color: #000000;
+            --text-color: #e0e0e0;
+            --accent-silver: linear-gradient(135deg, #ffffff 0%, #a5a5a5 100%);
+            --card-bg: #121212;
+            --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Branding */
+        .brand {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 10px 0 20px 0;
+            background: var(--accent-silver);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .pitch {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        /* CTA Section */
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 18px 0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+            box-sizing: border-box;
+        }
+
+        .btn:active { transform: scale(0.98); }
+
+        .btn-primary {
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #ffffff;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+        }
+
+        /* Info Card */
+        .info-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            width: 100%;
+            border: 1px solid #333;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+        }
+        
+        .info-item:last-child { margin-bottom: 0; }
+
+        .info-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .info-value {
+            font-size: 1.1rem;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        /* Trust Signals */
+        .trust-section {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+        .stars { color: #fff; }
+
+        footer {
+            margin-top: 60px;
+            font-size: 0.75rem;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (min-width: 480px) {
+            .actions { flex-direction: row; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "Markus",
+      "image": "https://www.markus.fr/wp-content/uploads/2023/10/logo-markus-noir.svg",
+      "@id": "https://uppear.fr/markus-angers/",
+      "url": "https://www.markus.fr/hotel/",
+      "telephone": "+33230314100",
+      "priceRange": "$$-$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "21 boulevard du Maréchal Foch",
+        "addressLocality": "Angers",
+        "postalCode": "49100",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "47.4698", 
+        "longitude": "-0.5515"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "07:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ],
+      "description": "Markus est un boutique-hôtel 4 étoiles intimiste de 14 chambres, niché dans un hôtel particulier du XIXe siècle en plein cœur d'Angers. Coffee Shop ouvert aux locaux.",
+      "starRating": {
+        "@type": "Rating",
+        "ratingValue": "4"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "300"
+      },
+      "sameAs": [
+        "https://www.instagram.com/markus_angers/",
+        "https://www.facebook.com/markusangers",
+        "[URL_WIKIDATA]"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="brand">Markus Angers</div>
+        
+        <h1>La plus recherchée des adresses cachées d'Angers</h1>
+        
+        <p class="pitch">
+            Hôtel particulier XIXe. 14 chambres confidentielles. Un Coffee Shop d'exception.
+            Vivez l'expérience d'une maison de famille premium en plein cœur de ville.
+        </p>
+
+        <div class="actions">
+            <a href="tel:+33230314100" class="btn btn-primary">📞 Appeler maintenant</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Markus+Hotel+21+boulevard+du+Marechal+Foch+Angers" target="_blank" class="btn btn-outline">📍 Voir l'itinéraire</a>
+        </div>
+
+        <div class="info-card">
+            <div class="info-item">
+                <span class="info-label">Nous trouver</span>
+                <div class="info-value">21 boulevard du Maréchal Foch<br>49100 Angers</div>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Réception & Coffee Shop</span>
+                <div class="info-value">Lun-Sam : 07h - 20h<br>Dim : 08h - 20h</div>
+            </div>
+        </div>
+
+        <div class="trust-section">
+            <span class="stars">★★★★★</span> 4.6/5 sur Google • Sélection Guide Michelin
+        </div>
+
+        <footer>
+            Propulsé par Uppear
+        </footer>
+    </div>
+
+</body>
+</html>
