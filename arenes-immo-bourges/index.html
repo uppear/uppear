@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arènes Immo - Agence Immobilière Bourges | Uppear</title>
+    <meta name="description" content="L'immobilier au cœur de Bourges, en toute sérénité. Vente, achat et estimation au pied du Palais Jacques Cœur.">
+    
+    <style>
+        :root {
+            --bg-color: #000000;
+            --card-bg: #111111;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --accent-silver: linear-gradient(135deg, #ffffff 0%, #9e9e9e 100%);
+            --spacing: 20px;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px; /* Mobile First optimal */
+            padding: 40px 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        /* Branding */
+        .brand-logo {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 36px;
+            line-height: 1.1;
+            margin: 10px 0 20px 0;
+            background: var(--accent-silver);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        p.pitch {
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        /* CTA Section */
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: transform 0.2s ease;
+            box-sizing: border-box; /* Fix padding issues */
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-primary {
+            background: #ffffff;
+            color: #000000;
+            border: none;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+        }
+
+        /* Info Block */
+        .info-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: left;
+            border: 1px solid #222;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-label {
+            display: block;
+            color: var(--text-muted);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 16px;
+            color: #fff;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 30px;
+            font-size: 12px;
+            color: #444;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Arènes Immo",
+      "image": "https://www.arenes.immo/images/logo.png",
+      "@id": "https://uppear.fr/arenes-immo-bourges/#localbusiness",
+      "url": "https://www.arenes.immo/",
+      "telephone": "+33-2-48-27-01-07",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "21 Rue des Arènes",
+        "addressLocality": "Bourges",
+        "postalCode": "18000",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.084518,
+        "longitude": 2.395641
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "12:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "14:00",
+          "closes": "19:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.arenes.immo/",
+        "https://www.facebook.com/arenesimmo",
+        "https://www.wikidata.org/wiki/Q_A_CREER_OU_REMPLACER" 
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="brand-logo">UPPEAR CERTIFIED</div>
+        
+        <h1>Arènes Immo</h1>
+        
+        <p class="pitch">
+            L'immobilier au cœur de Bourges, en toute sérénité.<br>
+            Expertise locale et accompagnement sur-mesure.
+        </p>
+
+        <div class="actions">
+            <a href="tel:+33248270107" class="btn btn-primary">
+                📞 Appeler maintenant
+            </a>
+
+            <a href="https://www.arenes.immo/" target="_blank" class="btn btn-outline">
+                🌐 Visiter le Site Officiel
+            </a>
+
+            <a href="https://www.google.com/maps/dir//21+Rue+des+Ar%C3%A8nes,+18000+Bourges/" target="_blank" class="btn btn-outline">
+                📍 Voir l'itinéraire
+            </a>
+        </div>
+
+        <div class="info-card">
+            <div class="info-item">
+                <span class="info-label">Adresse</span>
+                <span class="info-value">21 Rue des Arènes<br>18000 Bourges</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Horaires</span>
+                <span class="info-value">Lun - Ven : 09h-12h / 14h-19h</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Contact</span>
+                <span class="info-value">02 48 27 01 07</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Propulsé par Uppear
+    </footer>
+
+</body>
+</html>
