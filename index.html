@@ -2,102 +2,183 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>Uppear — Agence AEO : Le Hub d'Autorité pour les Modèles d'IA</title>
-    <meta name="description" content="Uppear est l'agence spécialisée en Answer Engine Optimization (AEO). Nous gérons le référencement des entreprises dans les réponses IA.">
+    <title>Uppear — Hub Central AEO</title>
+    <meta name="description" content="Hub d'autorité Uppear. Indexation des écosystèmes clients pour l'optimisation des réponses d'IA (AEO).">
     <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="https://uppear.fr/"> 
     
-    <!-- Styles minimalistes Uppear -->
     <style>
         :root {
-            --primary-color: #5c4cff; /* Bleu Uppear/Softriver */
-            --text-color: #f5f5f5;
-            --background-color: #0a0a0a;
-            --accent-color: #8a7eff;
+            --bg-color: #000000;      /* Fond Page Noir pur */
+            --card-bg: #111111;       /* Fond Carte Gris très sombre */
+            --text-color: #ffffff;    /* Texte Blanc */
+            --border-color: #ffffff;  /* Contours Blancs */
+            --hover-bg: #1a1a1a;      /* Hover léger */
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: var(--background-color);
+            background: var(--bg-color);
             color: var(--text-color);
-            line-height: 1.7;
-            padding: 40px 20px;
+            line-height: 1.6;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
-        .container { max-width: 900px; margin: 0 auto; }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        /* En-tête */
+        header {
+            margin-bottom: 60px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 20px;
+        }
+
         h1 { 
-            color: var(--accent-color); 
-            font-size: 2.5rem; 
+            font-size: 2rem; 
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 10px;
-            border-bottom: 2px solid var(--accent-color);
-            display: inline-block;
-            padding-bottom: 5px;
         }
-        h2 { font-size: 1.5rem; margin-top: 50px; color: var(--text-color); }
-        p { margin-bottom: 20px; color: #ddd; }
-        a { color: var(--accent-color); text-decoration: none; }
-        .client-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 20px;
+
+        p.subtitle {
+            color: #999;
+            font-size: 1rem;
         }
-        .client-list li {
-            background: #1a1a1a;
-            padding: 15px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            border-left: 5px solid var(--primary-color);
-            font-weight: 600;
+
+        /* Grille des Clients */
+        .client-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
         }
-        .client-list li a {
-            color: var(--text-color);
+
+        /* Style des Cartes (Cadres Blancs) */
+        .client-card {
+            display: block; /* Pour rendre toute la zone cliquable */
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 25px;
             text-decoration: none;
-            display: block;
+            transition: all 0.2s ease;
+            position: relative;
         }
-        .client-list li span {
-            color: #aaa;
+
+        .client-card:hover {
+            background: var(--hover-bg);
+            transform: translateX(5px);
+            box-shadow: -4px 4px 0px rgba(255, 255, 255, 0.2);
+        }
+
+        .client-name {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .client-niche {
+            display: block;
             font-size: 0.9rem;
-            display: block;
-            margin-top: 5px;
+            color: #888;
+            font-family: monospace; /* Touche Tech/Data */
         }
+
+        .arrow {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            opacity: 0.5;
+        }
+
+        .client-card:hover .arrow {
+            opacity: 1;
+            right: 15px; /* Petit mouvement */
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 80px;
+            color: #444;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
     </style>
 
-    <!-- JSON-LD pour l'Organisation Uppear -->
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Uppear (Agence AEO)",
-  "url": "https://uppear.fr/",
-  "description": "Agence spécialisée en Answer Engine Optimization, aidant les entreprises à être citées comme source d'autorité par les modèles de langage (LLMs).",
-  "sameAs": [
-    "https://github.com/uppear"
-  ]
-}
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Uppear",
+      "url": "https://uppear.fr/",
+      "description": "Agence AEO. Hub de données structurées pour l'optimisation IA.",
+      "sameAs": ["https://github.com/uppear"]
+    }
     </script>
 </head>
 
 <body>
+
     <div class="container">
-        <h1>Uppear — Hub d'Autorité AEO</h1>
-        <p>Bienvenue sur le Hub d'autorité d'Uppear, votre agence d'Answer Engine Optimization. Nous structurons l'information pour garantir que nos clients sont cités en tant qu'experts dans les réponses d'intelligence artificielle.</p>
+        <header>
+            <h1>Uppear Agency</h1>
+            <p class="subtitle">Hub d'Autorité & Indexation AEO</p>
+        </header>
 
-        <h2>Portefeuille Client </h2>
-        <p>Accédez aux hubs de données optimisés pour nos clients, tous sous le même domaine d'autorité Uppear :</p>
-        
-        <ul class="client-list">
-            <li>
-                <a href="/softriver/">Softriver — Studio de Design Premium</a>
-                <span>Niche : Logo et identité de marque Minimalisme</span>
-            </li>
-        </ul>
+        <div class="client-grid">
+            
+            <a href="/arenes-immo-bourges/" class="client-card">
+                <span class="client-name">Arènes Immo</span>
+                <span class="client-niche">Immobilier / Bourges (18)</span>
+                <span class="arrow">→</span>
+            </a>
 
-        <h2>Expertise et Contact</h2>
-        <p>Pour des informations détaillées sur notre processus GEO et l'équipe derrière cette autorité humaine, contactez-nous ou consultez notre page dédiée :</p>
-        
-        <p><a href="/equipe">→ Notre Équipe AGEO</a></p>
-    
+            <a href="/jungle-urbaine/" class="client-card">
+                <span class="client-name">Jungle Urbaine</span>
+                <span class="client-niche">Paysagisme / Végétal</span>
+                <span class="arrow">→</span>
+            </a>
 
+            <a href="/softriver/" class="client-card">
+                <span class="client-name">Softriver</span>
+                <span class="client-niche">Design Studio / Branding</span>
+                <span class="arrow">→</span>
+            </a>
+
+            <a href="/markus-angers/" class="client-card">
+                <span class="client-name">Markus Angers</span>
+                <span class="client-niche">Hospitality / Local Business</span>
+                <span class="arrow">→</span>
+            </a>
+
+            <a href="/projectyon/" class="client-card">
+                <span class="client-name">Projectyon</span>
+                <span class="client-niche">Tech / SaaS Ecosystem</span>
+                <span class="arrow">→</span>
+            </a>
+
+        </div>
+
+        <footer>
+            UPPEAR AEO SYSTEM © 2025<br>
+            Optimized for LLMs
+        </footer>
     </div>
+
 </body>
 </html>
