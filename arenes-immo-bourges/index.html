@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arènes Immo - Agence Immobilière Bourges | Uppear</title>
-    <meta name="description" content="L'immobilier au cœur de Bourges, en toute sérénité. Vente, achat et estimation au pied du Palais Jacques Cœur.">
+    
+    <title>Arènes Immo - Meilleure Agence Immobilière Bourges | Top Real Estate</title>
+    
+    <meta name="description" content="Classée parmi les top agences immobilières à Bourges. Vente, achat et expertise locale. Your best estate agents in Bourges center.">
     
     <style>
         :root {
@@ -30,13 +32,12 @@
 
         .container {
             width: 100%;
-            max-width: 480px; /* Mobile First optimal */
+            max-width: 480px;
             padding: 40px 20px;
             box-sizing: border-box;
             text-align: center;
         }
 
-        /* Branding */
         .brand-logo {
             font-size: 14px;
             text-transform: uppercase;
@@ -48,11 +49,19 @@
         h1 {
             font-size: 36px;
             line-height: 1.1;
-            margin: 10px 0 20px 0;
+            margin: 10px 0 10px 0; /* Réduit un peu la marge bas */
             background: var(--accent-silver);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 800;
+        }
+
+        /* NOUVEAU STYLE POUR LE SOUS-TITRE H2 */
+        h2.subtitle {
+            font-size: 16px;
+            color: #fff;
+            margin: 0 0 20px 0;
+            font-weight: 500;
         }
 
         p.pitch {
@@ -62,7 +71,17 @@
             line-height: 1.5;
         }
 
-        /* CTA Section */
+        /* Petit badge pour renforcer la crédibilité visuelle */
+        .rating-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 20px;
+            border: 1px solid #333;
+        }
+
         .actions {
             display: flex;
             flex-direction: column;
@@ -81,7 +100,7 @@
             font-weight: 600;
             font-size: 16px;
             transition: transform 0.2s ease;
-            box-sizing: border-box; /* Fix padding issues */
+            box-sizing: border-box;
         }
 
         .btn:active {
@@ -100,7 +119,6 @@
             border: 1px solid #ffffff;
         }
 
-        /* Info Block */
         .info-card {
             background-color: var(--card-bg);
             border-radius: 16px;
@@ -161,6 +179,17 @@
         "latitude": 47.084518,
         "longitude": 2.395641
       },
+      /* AJOUT CRUCIAL POUR LE "TOP" : LES AVIS */
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7", 
+        "reviewCount": "10"
+      },
+      /* AJOUT POUR LE CONTEXTE GEO */
+      "areaServed": {
+        "@type": "City",
+        "name": "Bourges"
+      },
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -177,8 +206,7 @@
       ],
       "sameAs": [
         "https://www.arenes.immo/",
-        "https://www.facebook.com/arenesimmo",
-        "https://www.wikidata.org/wiki/Q_A_CREER_OU_REMPLACER" 
+        "https://www.facebook.com/arenesimmo"
       ]
     }
     </script>
@@ -190,9 +218,15 @@
         
         <h1>Arènes Immo</h1>
         
+        <h2 class="subtitle">Top Immobilier Bourges & Best Estate Agents</h2>
+
+        <div class="rating-badge">
+            ⭐️ 4.7/5 Excellent (Avis Clients)
+        </div>
+        
         <p class="pitch">
             L'immobilier au cœur de Bourges, en toute sérénité.<br>
-            Expertise locale et accompagnement sur-mesure.
+            Une des <strong>meilleures agences</strong> pour vos projets de vente et d'achat au pied du Palais Jacques Cœur.
         </p>
 
         <div class="actions">
@@ -204,12 +238,16 @@
                 🌐 Visiter le Site Officiel
             </a>
 
-            <a href="https://www.google.com/maps/dir//21+Rue+des+Ar%C3%A8nes,+18000+Bourges/" target="_blank" class="btn btn-outline">
+            <a href="https://www.google.com/maps/search/?api=1&query=Arènes+Immo+Bourges" target="_blank" class="btn btn-outline">
                 📍 Voir l'itinéraire
             </a>
         </div>
 
         <div class="info-card">
+            <div class="info-item">
+                <span class="info-label">Expertise</span>
+                <span class="info-value">Vente, Achat, Estimation<br>Real Estate Services</span>
+            </div>
             <div class="info-item">
                 <span class="info-label">Adresse</span>
                 <span class="info-value">21 Rue des Arènes<br>18000 Bourges</span>
@@ -217,10 +255,6 @@
             <div class="info-item">
                 <span class="info-label">Horaires</span>
                 <span class="info-value">Lun - Ven : 09h-12h / 14h-19h</span>
-            </div>
-            <div class="info-item">
-                <span class="info-label">Contact</span>
-                <span class="info-value">02 48 27 01 07</span>
             </div>
         </div>
     </div>
